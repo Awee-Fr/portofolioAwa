@@ -57,12 +57,12 @@ export default function Hero() {
 
             {/* Concise Role Subtitle */}
             <p className="text-base sm:text-lg font-semibold text-purple-950/90 mb-3 max-w-xl leading-snug">
-              Web Development • Relational Databases • Graphic Design
+              Web Development (Laravel, .NET) • UI/UX Design (Figma) • Database Architecture
             </p>
 
             {/* Streamlined Bio Paragraph */}
             <p className="text-sm md:text-base text-gray-600 mb-8 max-w-lg leading-relaxed">
-              Student at Padang State Polytechnic passionate about building functional digital solutions—combining structured code, optimized database architecture, and polished modern user interfaces.
+              Informatics Management student at Politeknik Negeri Padang with hands-on experience in web development (Laravel, .NET) and UI/UX design in Figma. Passionate about building practical, user-centered digital solutions and eager to apply AI to real-world problems.
             </p>
 
             {/* Action Buttons: 3 Main CTA Pills */}

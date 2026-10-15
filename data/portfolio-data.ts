@@ -20,12 +20,27 @@ export interface Project {
 export interface SkillCategory {
   title: string;
   description: string;
-  iconName: "Code" | "Database" | "Palette" | "Layout";
+  iconName: "Code" | "Database" | "Palette" | "Layout" | "Cloud" | "Award";
   skills: {
     name: string;
     description: string;
     tag: string;
   }[];
+}
+
+export interface Certificate {
+  title: string;
+  issuer: string;
+  year: string;
+  badge: string;
+}
+
+export interface Hackathon {
+  title: string;
+  team: string;
+  role: string;
+  year: string;
+  stage: string;
 }
 
 export interface PersonalInfo {
@@ -37,6 +52,7 @@ export interface PersonalInfo {
   major: string;
   period: string;
   location: string;
+  phone: string;
   bio: string;
   shortBio: string;
   email: string;
@@ -50,14 +66,15 @@ export interface PersonalInfo {
 export const personalInfo: PersonalInfo = {
   name: "Shalwa Febri Rahmatullah",
   nickname: "Shalwa",
-  title: "Informatics Management Student & Digital Creator",
-  subTitle: "Web Development • Database Architecture • Desktop Applications • Graphic Design",
+  title: "Informatics Management Student & Full-Stack / UI/UX Developer",
+  subTitle: "Web Development (Laravel, .NET) • UI/UX Design (Figma) • Database Architecture • Cloud Basics",
   institution: "Politeknik Negeri Padang",
-  major: "Associate Degree in Informatics Management",
+  major: "D3 Informatics Management",
   period: "2024 – Present",
   location: "Padang, West Sumatra, Indonesia",
-  bio: "Informatics Management student at Politeknik Negeri Padang passionate about blending structured software engineering with clean visual design. Focused on responsive web development, relational database architecture, functional application development, and brand identity design.",
-  shortBio: "Building functional digital solutions through structured code, optimal database management, and modern user-centric interfaces.",
+  phone: "+62 823-9052-1671",
+  bio: "Informatics Management student at Politeknik Negeri Padang with hands-on experience in web development (Laravel, .NET) and UI/UX design in Figma. Led a development team on a student admissions system and co-designed a 10-screen academic mobile app prototype. Brings solid UI/UX and teamwork skills to build practical, user-centered digital solutions, and is eager to apply AI to real-world problems.",
+  shortBio: "Hands-on experience in web development (Laravel, .NET) and UI/UX design in Figma. Led a development team on a student admissions system and co-designed a 10-screen academic mobile app prototype.",
   email: "shalwafebri@gmail.com",
   githubUrl: "https://github.com/Awee-Fr",
   linkedinUrl: "https://www.linkedin.com/in/shalwa-febri-rahmatullah-915116405?utm_source=share_via&utm_content=profile&utm_medium=member_android",
@@ -68,67 +85,92 @@ export const personalInfo: PersonalInfo = {
 
 export const aboutHighlights = [
   {
-    title: "Web & App Development",
-    description: "Building responsive, structured software systems prioritizing intuitive user experiences across desktop and mobile platforms.",
+    title: "Web & Backend Engineering",
+    description: "Hands-on development using Laravel, .NET (MVC, Web API), PHP, REST API, and modern responsive frontends.",
     icon: "Laptop",
   },
   {
-    title: "Relational Database Architecture",
-    description: "Designing normalized entity-relationship schemas (ERD) and optimized SQL queries for high-performance, dependable systems.",
+    title: "Database Architecture",
+    description: "Designing normalized entity-relationship schemas (ERD) with MySQL and SQL Server for robust data integrity.",
     icon: "Database",
   },
   {
-    title: "Creative & Graphic Design",
-    description: "Crafting high-precision vector branding, iconography, and interactive interface prototypes using Figma and Adobe Illustrator.",
+    title: "UI/UX & Mobile Prototyping",
+    description: "Co-designing full 10-screen academic mobile app prototypes, user flows, and wireframes in Figma.",
     icon: "PenTool",
   },
   {
-    title: "Continuous Innovation",
-    description: "Enthusiastic about mastering modern frameworks, industry best practices, and collaborating in team-driven technological solutions.",
+    title: "Leadership & Cloud Essentials",
+    description: "Leading development teams, participant in KMIPN VIII Hackathon, and certified in Huawei HCIA Cloud Services & Computing.",
     icon: "Sparkles",
+  },
+];
+
+export const certificates: Certificate[] = [
+  {
+    title: "HCIA-Cloud Service V3.5 (Certificate of Completion)",
+    issuer: "Huawei ICT Academy",
+    year: "2026",
+    badge: "Cloud Services",
+  },
+  {
+    title: "HCIA-Cloud Computing V5.5 (Certificate of Completion)",
+    issuer: "Huawei ICT Academy",
+    year: "2026",
+    badge: "Cloud Computing",
+  },
+];
+
+export const hackathons: Hackathon[] = [
+  {
+    title: "KMIPN VIII 2026 Hackathon",
+    team: "Team Martabak Nyasar ke Mesir, SIVOKA",
+    role: "Team Member",
+    year: "2026",
+    stage: "Participant (Proposal Stage)",
   },
 ];
 
 export const skillCategories: SkillCategory[] = [
   {
-    title: "Web Development",
-    description: "End-to-end responsive web applications from dynamic interfaces to secure backends.",
+    title: "Hard Skills (Web & Desktop)",
+    description: "End-to-end web engineering, backend architecture, and object-oriented software.",
     iconName: "Code",
     skills: [
-      { name: "PHP & Laravel", description: "Backend architecture, MVC structure, and relational system integration", tag: "Backend" },
-      { name: "HTML5 & CSS3", description: "Semantic web structure, accessibility standards, and responsive design", tag: "Core Web" },
-      { name: "JavaScript & Next.js", description: "Interactive client scripting and modern full-stack React framework", tag: "Frontend" },
-      { name: "Tailwind CSS & Bootstrap", description: "Utility-first styling for fast, consistent, and clean component systems", tag: "Styling" },
+      { name: "PHP & Laravel", description: "MVC architecture, relational data integration, and full-stack web applications", tag: "Backend" },
+      { name: "C# & .NET (MVC, Web API, WinForms)", description: "Enterprise desktop applications and structured web API development", tag: "Core .NET" },
+      { name: "REST API & MySQL / SQL Server", description: "Structured query design, database persistence, and service APIs", tag: "Data & API" },
+      { name: "HTML, CSS, JavaScript, Tailwind & Bootstrap", description: "Responsive layouts, utility-first design systems, and client scripting", tag: "Frontend" },
     ],
   },
   {
-    title: "Database",
-    description: "Relational database administration, schema modeling, and data integrity.",
-    iconName: "Database",
-    skills: [
-      { name: "MySQL", description: "Primary relational DBMS for transactional data persistence and management", tag: "RDBMS" },
-      { name: "Database Design (ERD)", description: "Table normalization, foreign key relations, and entity modeling", tag: "Data Modeling" },
-      { name: "SQL Querying (DDL & DML)", description: "Structured query formulation, table definition, and data manipulation", tag: "SQL" },
-    ],
-  },
-  {
-    title: "Desktop/Mobile Development",
-    description: "Object-oriented desktop applications and mobile user experience prototyping.",
-    iconName: "Layout",
-    skills: [
-      { name: "C# & .NET (Windows Forms)", description: "Modular desktop information systems with relational database connectivity", tag: "Desktop" },
-      { name: "Java & OOP", description: "Object-oriented principles including encapsulation, inheritance, and clean code", tag: "Core Language" },
-      { name: "Figma Mobile Prototyping", description: "End-to-end mobile user journey mapping and high-fidelity prototypes", tag: "Mobile UX" },
-    ],
-  },
-  {
-    title: "Graphic Design",
-    description: "High-precision vector assets, digital typography, and brand identity design.",
+    title: "Design & Development Tools",
+    description: "Interface prototyping, graphic branding, and developer workflows.",
     iconName: "Palette",
     skills: [
-      { name: "Adobe Illustrator", description: "Precision vector logo creation, custom typography, and corporate branding", tag: "Vector" },
-      { name: "Figma (UI/UX Design)", description: "Interactive wireframes, component design systems, and prototype flows", tag: "Interface" },
-      { name: "Adobe Photoshop", description: "Digital image manipulation, raster processing, and commercial presentation mockups", tag: "Raster" },
+      { name: "Figma (UI/UX Prototyping)", description: "High-fidelity mobile prototypes, 10-screen user flows, and interactive design systems", tag: "UI/UX" },
+      { name: "Adobe Photoshop & Illustrator", description: "Precise vector branding, industrial automotive logos, and raster manipulation", tag: "Graphic Design" },
+      { name: "Git & GitHub", description: "Version control, branching workflows, team repository collaboration, and releases", tag: "Version Control" },
+      { name: "Visual Studio & VS Code", description: "Modern IDE development environments for C#, .NET, PHP, and web workflows", tag: "Development" },
+    ],
+  },
+  {
+    title: "Cloud Computing (Huawei HCIA)",
+    description: "Cloud infrastructure fundamentals certified by Huawei ICT Academy.",
+    iconName: "Layout",
+    skills: [
+      { name: "Huawei HCIA-Cloud Service V3.5", description: "Cloud computing service architectures, compute, storage, and networking basics", tag: "Certified" },
+      { name: "Huawei HCIA-Cloud Computing V5.5", description: "Virtualization, cloud resource management, and enterprise infrastructure basics", tag: "Certified" },
+    ],
+  },
+  {
+    title: "Soft Skills & Team Delivery",
+    description: "Collaborative execution and engineering team management.",
+    iconName: "Database",
+    skills: [
+      { name: "Team Leadership", description: "Led student admissions (PPDB) engineering team through design, development, and launch", tag: "Leadership" },
+      { name: "Active Collaboration", description: "Co-designed 10-screen academic prototype and collaborated in KMIPN VIII Hackathon", tag: "Teamwork" },
+      { name: "Project Delivery & Problem Solving", description: "Focus on user-centric digital solutions and eagerness to apply AI to real-world problems", tag: "Delivery" },
     ],
   },
 ];

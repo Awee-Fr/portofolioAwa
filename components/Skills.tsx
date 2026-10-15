@@ -5,7 +5,8 @@ import {
   Layout, 
   Check, 
   Layers,
-  Sparkles
+  Sparkles,
+  Cloud
 } from "lucide-react";
 import { skillCategories } from "@/data/portfolio-data";
 
@@ -20,6 +21,8 @@ export default function Skills() {
         return <Layout className="w-5 h-5 text-violet-700" />;
       case "Palette":
         return <Palette className="w-5 h-5 text-amber-600" />;
+      case "Cloud":
+        return <Cloud className="w-5 h-5 text-sky-600" />;
       default:
         return <Layers className="w-5 h-5 text-purple-700" />;
     }

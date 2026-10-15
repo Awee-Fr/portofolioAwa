@@ -96,17 +96,27 @@ export default function Contact() {
               Open to software engineering projects, relational database design discussions, and creative graphic design collaborations.
             </p>
 
-            {/* Single Focused CTA Action Button: Send Message via Email */}
-            <div className="flex items-center justify-center mb-8">
+            {/* Focused CTA Action Buttons: Email & WhatsApp */}
+            <div className="flex flex-wrap items-center justify-center gap-3.5 mb-8">
               <a
                 href={gmailDirectUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2.5 px-8 py-3.5 rounded-full bg-gradient-to-r from-amber-400 via-amber-300 to-amber-500 hover:from-amber-300 hover:to-amber-200 text-purple-950 font-extrabold text-sm sm:text-base shadow-lg shadow-amber-400/25 hover:scale-105 active:scale-95 transition-all duration-200 cursor-pointer"
+                className="inline-flex items-center gap-2.5 px-7 py-3.5 rounded-full bg-gradient-to-r from-amber-400 via-amber-300 to-amber-500 hover:from-amber-300 hover:to-amber-200 text-purple-950 font-extrabold text-xs sm:text-sm shadow-lg shadow-amber-400/25 hover:scale-105 active:scale-95 transition-all duration-200 cursor-pointer"
               >
-                <Mail className="w-5 h-5 text-purple-950" />
+                <Mail className="w-4 h-4 text-purple-950" />
                 <span>Send Message via Email</span>
-                <ArrowRight className="w-5 h-5 text-purple-950" />
+                <ArrowRight className="w-4 h-4 text-purple-950" />
+              </a>
+
+              <a
+                href="https://wa.me/6282390521671"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-6 py-3.5 rounded-full bg-emerald-500 hover:bg-emerald-600 text-white font-bold text-xs sm:text-sm shadow-lg shadow-emerald-500/25 hover:scale-105 active:scale-95 transition-all duration-200 cursor-pointer"
+                title="WhatsApp Direct Contact"
+              >
+                <span>WhatsApp: {personalInfo.phone}</span>
               </a>
             </div>
 

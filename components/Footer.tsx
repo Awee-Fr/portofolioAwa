@@ -155,6 +155,17 @@ export default function Footer() {
                   {personalInfo.email}
                 </a>
               </li>
+              <li className="flex items-start gap-2">
+                <span className="w-3.5 h-3.5 text-emerald-400 font-bold shrink-0 mt-0.5 text-center leading-none">✆</span>
+                <a 
+                  href="https://wa.me/6282390521671"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-amber-300 transition-colors underline decoration-purple-500/50 underline-offset-2"
+                >
+                  {personalInfo.phone}
+                </a>
+              </li>
             </ul>
           </div>
 
