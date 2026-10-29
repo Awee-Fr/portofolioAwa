@@ -67,14 +67,14 @@ export const personalInfo: PersonalInfo = {
   name: "Shalwa Febri Rahmatullah",
   nickname: "Shalwa",
   title: "Informatics Management Student & Full-Stack / UI/UX Developer",
-  subTitle: "Web Development (Laravel, .NET) • UI/UX Design (Figma) • Database Architecture • Cloud Basics",
+  subTitle: "Web Development (Laravel, PHP) • UI/UX Design (Figma) • Database Architecture • Cloud Basics",
   institution: "Politeknik Negeri Padang",
   major: "D3 Informatics Management",
   period: "2024 – Present",
   location: "Padang, West Sumatra, Indonesia",
   phone: "+62 823-9052-1671",
-  bio: "Informatics Management student at Politeknik Negeri Padang with hands-on experience in web development (Laravel, .NET) and UI/UX design in Figma. Led a development team on a student admissions system and co-designed a 10-screen academic mobile app prototype. Brings solid UI/UX and teamwork skills to build practical, user-centered digital solutions, and is eager to apply AI to real-world problems.",
-  shortBio: "Hands-on experience in web development (Laravel, .NET) and UI/UX design in Figma. Led a development team on a student admissions system and co-designed a 10-screen academic mobile app prototype.",
+  bio: "Informatics Management student at Politeknik Negeri Padang with hands-on experience in web development (Laravel, PHP) and UI/UX design in Figma. Led a development team on a student admissions system and co-designed a 10-screen academic mobile app prototype. Brings solid UI/UX and teamwork skills to build practical, user-centered digital solutions, and is eager to apply AI to real-world problems.",
+  shortBio: "Hands-on experience in web development (Laravel, PHP) and UI/UX design in Figma. Led a development team on a student admissions system and co-designed a 10-screen academic mobile app prototype.",
   email: "shalwafebri@gmail.com",
   githubUrl: "https://github.com/Awee-Fr",
   linkedinUrl: "https://www.linkedin.com/in/shalwa-febri-rahmatullah-915116405?utm_source=share_via&utm_content=profile&utm_medium=member_android",
@@ -123,11 +123,25 @@ export const certificates: Certificate[] = [
 
 export const hackathons: Hackathon[] = [
   {
+    title: "PENS Hackathon 2026",
+    team: "Team MinangByte",
+    role: "UI/UX Designer & Presenter",
+    year: "2026",
+    stage: "Participant",
+  },
+  {
     title: "KMIPN VIII 2026 Hackathon",
     team: "Team Martabak Nyasar ke Mesir, SIVOKA",
     role: "Team Member",
     year: "2026",
-    stage: "Participant (Proposal Stage)",
+    stage: "Proposal Submission",
+  },
+  {
+    title: "PLAY IT! 2026 Hackathon",
+    team: "Team Reyhan Win Again Malang",
+    role: "Participant",
+    year: "2026",
+    stage: "Proposal Submission",
   },
 ];
 
@@ -276,7 +290,8 @@ export const projects: Project[] = [
 
 export const educationInfo = {
   institution: "Politeknik Negeri Padang",
-  degree: "Associate Degree in Informatics Management",
+  degree: "D3 Informatics Management",
+  gpa: "3.57/4.00",
   status: "Active Student",
   period: "2024 – Present",
   location: "Padang, West Sumatra, Indonesia",

@@ -62,9 +62,17 @@ export default function Education() {
                 </div>
 
                 <div>
-                  <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-emerald-50 text-emerald-800 border border-emerald-200 text-[10px] font-bold uppercase tracking-wider mb-1">
-                    <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
-                    <span>{educationInfo.status}</span>
+                  <div className="flex flex-wrap items-center gap-2 mb-1.5">
+                    <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-emerald-50 text-emerald-800 border border-emerald-200 text-[10px] font-bold uppercase tracking-wider">
+                      <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
+                      <span>{educationInfo.status}</span>
+                    </div>
+                    {educationInfo.gpa && (
+                      <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-amber-50 text-amber-900 border border-amber-300 text-[10px] font-bold uppercase tracking-wider">
+                        <span className="text-amber-500 font-extrabold">✦</span>
+                        <span>GPA : {educationInfo.gpa}</span>
+                      </div>
+                    )}
                   </div>
                   <h3 className="text-xl sm:text-2xl font-extrabold text-gray-950 leading-tight">
                     {educationInfo.degree}
